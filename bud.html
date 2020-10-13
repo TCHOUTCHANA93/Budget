@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="bud.css">
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-11 mx-auto pt-3">
+      <h3 class="titre">BUDGET APP</h3>
+      <div class="row"> 
+
+        <div class="col-md-5 my-3 mt-2 budget-form" id="budgetForm">
+        <form id="addform" class="" >
+          <h5>please enter your budget</h5>
+          <div class="form-group">
+           <input type="number" class="form-control"  id="number" >
+          </div>
+          <button type="submit" class="btn">Ajouter Budget</button>
+        </form>
+        </div>
+
+        <div class="col-md-7 my-3 tous">
+        <div class="row my-3">
+          <div class="budget col col-md col-sm">
+            <h2>Budget</h2>
+            <img src="image/money-bag.svg" width="40" alt="" />
+            <h4 class="amount">$ <span id="budgetAmount">0</span></h4>
+          </div>
+          <div class="expenses col col-md col-sm">
+          <h2>Expenses</h2>
+          <img src="image/accounting.svg" width="40" alt="" />
+          <h4 class="exp-amount">$ <span id="expensesAmount">0</span></h4>
+          </div> 
+          <div class="balance col col-md col-sm">
+          <h2>Balance</h2>
+          <img src="image/law.svg" width="40" alt="" />
+          <h4 class="amount bala">$ <span id="balanceAmount">0</span></h4>
+          </div>  
+        </div>
+        </div>
+      </div>
+      
+
+      <!-- modal -->
+
+      <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content bbg">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Edit Form</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+            <div class="edit-form" id="editForm">
+                <form action="" >
+                   <div id="saveEdit">
+                       <label for="">Edit your expense</label> <br />
+                       <input type="text" class="form-control" id="editExpName" />
+                   </div>
+                   <div class="">
+                       <label for="">Edit expense amount</label> <br />
+                       <input type="number" class="form-control" id="editExpNumber" />
+                   </div>
+                   <div class="modal-footer">
+                    <button type="submit" class="btn">Save changes</button>
+                   </div>
+                </form>
+             </div>
+            </div>
+          </div>
+        </div>
+        </div> 
+
+      <div class="row my-5">
+        <div class="col-md-5 my-3 expense-form" id="expense-form">
+         <form  id="expForm">
+          <h5 class="text-capitalize">please enter your expense</h5>
+          <div class="form-group">
+           <input type="text" class="form-control" id="expName">
+          </div>
+          <h5 class="text-capitalize">please enter expense amount</h5>
+          <div class="form-group">
+           <input type="number" class="form-control" id="expNumber">
+          </div>
+          <button type="submit" class="btn" id="submitExpen">Add expense</button>
+         </form>
+        </div>
+
+
+        
+
+        <div class="col-md-7 my-3 toute">
+            <div id="displayExpenses">
+              <div class="row my-3 budget-list">
+                <div class="col">
+                  <h4>expense title</h4>
+                </div>
+                <div class="col">
+                  <h4>expense value</h4>
+                </div>
+                <div class="col">
+                </div>
+              </div>
+              <div id="expValue">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script src="bud.js"></script>
+</body>
+</html>
